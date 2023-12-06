@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        
+        body {
+        background-image: url("photo/78786.jpg");
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-size: cover;
+        }
+        h1{
+            letter-spacing: 2px;
+        }
+        .col-md-8 {
+            width: 700px; 
+            text-align: center;
+            margin: 0 auto;
+        }
+        .form-control {
+             margin-right: 20px;
+        }
+        .navbar{
+            background-color:#71a0a5;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .footer{
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:#9ba6a5;
+        color: white;
+        text-align: center;
+        padding-top:20px;
+        padding-bottom:20px;
+        }
+        a{
+            text-decoration:none;
+        }
+        .custom-button,.custom-button:hover{
+            background-color:#346473;
+            color:#f7f7f2;
+        }
+    </style> 
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light p-3">
+        <div class="container-fluid">
+            <h1 class="navbar-brand" style="font-size: 30px">住所録テストサイト</h1>
+        </div>
+    </nav>
+    <div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+           <p class="h6 pb-3" id="error"></p>
+            <form action="list.php" class="input-group" method="post" onsubmit="return Search()">
+              <input type="text" class="form-control rounded" id="search_query" name="search_query" placeholder="検索...">
+              <div class="input-group-append">
+               <input class="btn custom-button" type="submit" value="検索" />
+              </div>
+            </form>
+            <a href="register.php" class="btn custom-button mt-5">新規登録</a>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+          © 2023 Copyright: <a href="#" class="text-reset fw-bold">EXCS Co.Ltd</a>
+    </div>
+     <script>
+        function Search() {
+            var query = document.getElementById("search_query").value;
+            if (query.trim() === "") {
+                document.getElementById("error").textContent = "名前とか住所を入力してください";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
+
