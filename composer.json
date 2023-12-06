@@ -1,0 +1,11 @@
+{
+    "name": "exs/ex-test",
+    "autoload": {
+        "psr-4": {
+            "exs\\ex-test\\": "src/"
+        }
+    },
+    "require": {
+        "smarty/smarty": "^4.3"
+    }
+}
