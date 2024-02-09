@@ -7,10 +7,10 @@ require_once '../config/smarty.config.php';
 require_once '../vendor/smarty/smarty/libs/Smarty.class.php';
 
 //データベース接続設定(Database connection settings)
-$host = '192.168.18.1';     // PostgreSQL server host
+$host = 'localhost';     // PostgreSQL server host
 $port = '5432';          // PostgreSQL port (default is 5432)
 $dbname = 'address';  // PostgreSQL database name
-$user = 'exs';      // PostgreSQL username
+$user = 'postgres';      // PostgreSQL username
 $password = 'phwaythitsarkyaw';  // PostgreSQL password
 
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
